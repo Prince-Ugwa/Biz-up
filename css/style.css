@@ -48,11 +48,18 @@ ul {
 }
 img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 h1 {
   font-size: 38px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 18px;
 }
 p {
   font-size: 16px;
@@ -68,11 +75,21 @@ p {
   text-align: center;
   /* border-radius: 8px; */
   font-size: 16px;
+  border-radius: 20px;
 }
 
 .btn-outline {
   background-color: var(--text-color);
-  color: #f9ad58;
+  color: #fca542;
+  border-radius: 20px;
+}
+.btn-blue {
+  color: #2948e6;
+  font-size: 16px;
+  transition: var(--transition);
+}
+.btn-blue:hover {
+  color: #fca542;
 }
 /* //////////////////////////////////////////////////////////////////////////// */
 /* //////////// Nav Bar starts/////////////////// */
@@ -87,7 +104,7 @@ nav {
 }
 /* ////////////////////////////////JAVASCRIPT WINDOW SCROLL///////////////////////////////////////////////// */
 .window-scroll {
-  background: #6c63ff;
+  background: #2948e6;
   /* background-image: linear-gradient(to right, #2948e6, #3791de); */
   box-shadow: 0 5px 32px rgba(11, 11, 11, 0.3);
   transition: background 0.6s ease-in-out;
@@ -114,11 +131,11 @@ nav .logo {
   transition: var(--transition);
 }
 .nav-links li a:hover {
-  color: #f9ad58;
+  color: #fca542;
 }
 .btn-sm {
   font-size: 16px;
-  border-radius: 14px;
+  border-radius: 20px;
   padding: 7px 16px;
 }
 .nav-btn {
@@ -162,7 +179,7 @@ nav .logo {
 }
 
 .hero-left .heading {
-  font-size: 46px;
+  font-size: 44px;
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-color);
@@ -191,7 +208,7 @@ nav .logo {
   font-size: 48px;
 }
 .features span {
-  color: #f9ad58;
+  color: #fca542;
 }
 .features-container {
   display: grid;
@@ -202,7 +219,8 @@ nav .logo {
 
 .feature-left {
   object-fit: cover;
-  border-radius: 12px;
+  border-top-left-radius: 40%;
+  border-bottom-right-radius: 40%;
   overflow: hidden;
 }
 .feature-left img {
@@ -260,7 +278,81 @@ nav .logo {
   background-color: #eb8d52;
 }
 /* //////////// FEATURE ENDS////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* /////////////////////FEATURES2//////////////////////////////////////// */
 
+.biz-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 32px;
+
+  color: #777;
+}
+.business-feature {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.business {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.business .biz-img {
+  height: 200px;
+}
+.business .biz-img img {
+  filter: blur(0.8px);
+  transition: all 2s ease-in-out;
+}
+.business:hover .biz-img img {
+  transform: scale(1.2);
+  filter: blur(0);
+}
+.business .biz-content {
+  padding: 20px;
+  text-align: left;
+  margin-top: 15px;
+}
+.business .biz-content h4 {
+  font-size: 24px;
+  padding-bottom: 8px;
+  color: #888;
+}
+.business .biz-content p {
+  margin-bottom: 12px;
+  color: #787878;
+}
+
+.accordions {
+  background-color: #fff;
+  padding: 60px 0;
+}
+.accordion-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.toggle {
+  font-size: 32px;
+  margin-right: 20px;
+  align-self: flex-start;
+}
+.accordion-faq {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}
+.accordion-faq h5 {
+  margin-bottom: 14px;
+}
 /* FORM */
 .modal {
   position: fixed;

@@ -14,7 +14,14 @@
 // // console.log(p3.toUpperCase());
 
 const header = document.querySelector("nav");
+const fe = document.querySelector(".features");
+const btn1 = document.querySelector(".btn1");
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("window-scroll", window.scrollY > 50);
+});
+
+btn1.addEventListener("click", (e) => {
+  e.preventDefault();
+  fe.scrollIntoView({ behavior: "smooth" });
 });
