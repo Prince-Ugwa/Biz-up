@@ -14,7 +14,7 @@
 // // console.log(p3.toUpperCase());
 
 const header = document.querySelector("nav");
-const fe = document.querySelector(".features");
+const featureBtn = document.querySelector(".features");
 const btn1 = document.querySelector(".btn1");
 
 window.addEventListener("scroll", () => {
@@ -23,5 +23,13 @@ window.addEventListener("scroll", () => {
 
 btn1.addEventListener("click", (e) => {
   e.preventDefault();
-  fe.scrollIntoView({ behavior: "smooth" });
+  featureBtn.scrollIntoView({ behavior: "smooth" });
+});
+
+///Accordion
+const accordionFag = document.querySelectorAll(".accordion-faq");
+accordionFag.forEach((faq) => {
+  faq.addEventListener("click", function (e) {
+    faq.classList.toggle("open");
+  });
 });

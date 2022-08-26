@@ -13,6 +13,16 @@
   --container-width-medium: 90%;
   --container-width-small: 94%;
   --transition: all 400ms ease;
+  --dark-des-blue: hsl(238, 29%, 16%);
+  --very-dark-gray-blue: hsl(237, 12%, 33%);
+  --dark-gray-blue: hsl(240, 6%, 50%);
+  --light-gray-blue: hsl(240, 5%, 91%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* violet & red */
+  --red: hsl(14, 88%, 65%);
+  --violet: hsl(273, 75%, 66%);
+  /* background */
+  --background-col: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
 }
 
 html {
@@ -55,14 +65,13 @@ img {
 h1 {
   font-size: 38px;
 }
-h4 {
+h4,
+h5 {
   font-size: 24px;
 }
-h5 {
-  font-size: 18px;
-}
+
 p {
-  font-size: 16px;
+  font-size: 18px;
 }
 .btn {
   display: inline-block;
@@ -336,22 +345,31 @@ nav .logo {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-.toggle {
-  font-size: 32px;
-  margin-right: 20px;
-  align-self: flex-start;
-}
+
 .accordion-faq {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   height: fit-content;
   padding: 20px;
   background-color: var(--primary-color);
   color: #fff;
   cursor: pointer;
+  gap: 20px;
 }
 .accordion-faq h5 {
   margin-bottom: 14px;
+}
+.toggle {
+  font-size: 24px;
+  align-self: start;
+  display: flex;
+  align-content: flex-start;
+}
+.accordion-faq p {
+  display: none;
+}
+.open p {
+  display: block;
 }
 /* FORM */
 .modal {
