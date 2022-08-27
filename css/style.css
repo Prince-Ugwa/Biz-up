@@ -40,7 +40,7 @@ body {
 }
 
 section {
-  margin: 92px 0;
+  margin: 150px 0;
 }
 section h2 {
   font-size: 52px;
@@ -63,7 +63,7 @@ img {
   display: block;
 }
 h1 {
-  font-size: 38px;
+  font-size: 42px;
 }
 h4,
 h5 {
@@ -83,7 +83,7 @@ p {
   border: none;
   text-align: center;
   /* border-radius: 8px; */
-  font-size: 16px;
+  font-size: 24px;
   border-radius: 20px;
 }
 
@@ -93,9 +93,9 @@ p {
   border-radius: 20px;
 }
 .btn-blue {
-  color: #2948e6;
-  font-size: 16px;
+  color: #fca542;
   transition: var(--transition);
+  font-size: 18px;
 }
 .btn-blue:hover {
   color: #fca542;
@@ -113,7 +113,7 @@ nav {
 }
 /* ////////////////////////////////JAVASCRIPT WINDOW SCROLL///////////////////////////////////////////////// */
 .window-scroll {
-  background: #2948e6;
+  background: #2948e6d4;
   /* background-image: linear-gradient(to right, #2948e6, #3791de); */
   box-shadow: 0 5px 32px rgba(11, 11, 11, 0.3);
   transition: background 0.6s ease-in-out;
@@ -136,14 +136,14 @@ nav .logo {
 .nav-links li a {
   color: var(--text-color);
   display: block;
-  font-size: 18px;
+  font-size: 24px;
   transition: var(--transition);
 }
 .nav-links li a:hover {
   color: #fca542;
 }
 .btn-sm {
-  font-size: 16px;
+  /* font-size: 16px; */
   border-radius: 20px;
   padding: 7px 16px;
 }
@@ -159,7 +159,7 @@ nav .logo {
   gap: 5px;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 24px;
   cursor: pointer;
 }
 .btn-mobile-nav {
@@ -188,7 +188,7 @@ nav .logo {
 }
 
 .hero-left .heading {
-  font-size: 44px;
+  font-size: 52px;
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-color);
@@ -196,7 +196,8 @@ nav .logo {
 }
 .hero-left .text {
   color: #eef5fd;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
+  font-size: 24px;
 }
 .hero-btn {
   display: flex;
@@ -213,7 +214,7 @@ nav .logo {
 .features h1 {
   color: #2948e6;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
   font-size: 48px;
 }
 .features span {
@@ -221,20 +222,21 @@ nav .logo {
 }
 .features-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  grid-template-columns: 45fr 55fr;
+  gap: 60px;
   /* align-items: center; */
 }
 
 .feature-left {
-  object-fit: cover;
-  border-top-left-radius: 40%;
-  border-bottom-right-radius: 40%;
+  object-fit: contain;
   overflow: hidden;
 }
 .feature-left img {
   height: 100%;
   width: 100%;
+}
+.feature-right {
+  align-items: flex-end;
 }
 .features .feature-right-list {
   display: grid;
@@ -259,7 +261,7 @@ nav .logo {
 }
 .features .feature-categories h4 {
   font-size: 20px;
-  margin-bottom: 12px;
+  margin: 15px;
   color: #bff6cf;
 }
 .features .feature-categories ion-icon {
@@ -300,6 +302,16 @@ nav .logo {
 
   color: #777;
 }
+.biz-text p {
+  width: 700px;
+  margin: 40px 0;
+}
+.biz-text h2 {
+  color: #2948e6;
+}
+.biz-text span {
+  color: var(--button-color);
+}
 .business-feature {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -311,11 +323,11 @@ nav .logo {
   overflow: hidden;
 }
 .business .biz-img {
-  height: 200px;
+  height: 300px;
 }
 .business .biz-img img {
-  filter: blur(0.8px);
-  transition: all 2s ease-in-out;
+  filter: blur(1px);
+  transition: all 0.8s ease-in-out;
 }
 .business:hover .biz-img img {
   transform: scale(1.2);
@@ -335,40 +347,55 @@ nav .logo {
   margin-bottom: 12px;
   color: #787878;
 }
-
 .accordions {
-  background-color: #fff;
-  padding: 60px 0;
+  padding: 10px 0;
 }
 .accordion-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 32px;
+}
+.QNA {
+  color: #f5f5f5;
+  cursor: pointer;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #2948e6;
+}
+.question h5 {
+  letter-spacing: 0.9px;
+  font-weight: 500;
+  transition: 0.2s ease-in;
 }
 
-.accordion-faq {
-  display: flex;
-  /* align-items: center; */
-  height: fit-content;
-  padding: 20px;
-  background-color: var(--primary-color);
-  color: #fff;
-  cursor: pointer;
-  gap: 20px;
+.question .icon {
+  font-size: 28px;
+  /* align-self: flex-end; */
+  transition: 0.3s ease;
 }
-.accordion-faq h5 {
-  margin-bottom: 14px;
-}
-.toggle {
-  font-size: 24px;
-  align-self: start;
-  display: flex;
-  align-content: flex-start;
-}
-.accordion-faq p {
+.ans {
+  line-height: 1.8;
+  background-color: #253fc2;
+  transition: all 1s ease-in;
+  padding: 10px;
   display: none;
 }
-.open p {
+.ans p {
+  padding: 0 10px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.open .icon {
+  transform: rotate(-180deg);
+}
+.open h5 {
+  font-size: 28px;
+}
+.open .ans {
   display: block;
 }
 /* FORM */
@@ -378,36 +405,49 @@ nav .logo {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 600px;
+  width: 100%;
   background-color: var(--text-color);
-  padding: 50px 60px;
-  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.3);
+  padding: 50px;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
 }
-.modal__form {
-  /* margin: 0 3rem; */
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+.modal h2 {
+  color: #fca542;
+  margin-bottom: 24px;
+}
+
+.modal__form .names {
+  display: flex;
   align-items: center;
-  gap: 25px;
+  justify-content: space-between;
+  gap: 40px;
+}
+.fname,
+.lname {
+  flex: 1;
 }
 .modal__form label {
   font-size: 17px;
   font-weight: 500;
+  display: block;
+  margin-bottom: 12px;
 }
 
 .modal__form input,
 .modal__form textarea {
   font-size: 1.7rem;
-  padding: 10px 15px;
+  padding: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  width: 100%;
+  margin-bottom: 18px;
 }
 
 .modal__form .btn {
   margin-top: 12px;
 }
-.btn--close-modal {
+.btn-close-modal {
   position: absolute;
   top: 5px;
   right: 50px;
@@ -418,4 +458,16 @@ nav .logo {
 }
 .hidden {
   display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
 }
