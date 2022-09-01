@@ -9,35 +9,68 @@
 // console.log([...peru].join("").toUpperCase(), s3);
 
 // // console.log(p3.toUpperCase());
-////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
 
-const header = document.querySelector("nav");
+// const header = document.querySelector("nav");
+const nav = document.querySelector(".nav");
 const featureBtn = document.querySelector(".features");
 const btn1 = document.querySelector(".btn1");
 
-//////////////////ACCORDION SELECTION///////////////////
+//////////////////ACCORDION SELECTION//////////////////////////////////
 const accordionFag = document.querySelectorAll(".accordion-faq");
 const qna = document.querySelectorAll(".QNA");
 
-//////////////////MODAL SELECTION//////////////////////
+//////////////////MODAL SELECTION/////////////////////////////////////
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".btn-close-modal");
 const btnOpenModal = document.querySelectorAll(".btn-open-modal");
 const search = document.querySelector(".search");
+const section1 = document.querySelector("#section-1");
 
-//////////////////CHANGING HEADER BG ON SCROLL/////////////////////////
+//////////////////CHANGING HEADER BG ON SCROLL / STICKY /////////////////////////
 window.addEventListener("scroll", () => {
-  header.classList.toggle("window-scroll", window.scrollY > 50);
+  nav.classList.toggle("window-scroll", window.scrollY > 50);
+});
+// const getCoord = section1.getBoundingClientRect();
+// // console.log(getCoord);
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > getCoord.top) nav.classList.add("window-scroll");
+//   else nav.classList.remove("window-scroll");
+// });
+////////////////////////fade animation//////////////////////////////////
+nav.addEventListener("mouseover", function (e) {
+  if (e.target.classList.contains("nav-link")) {
+    const link = e.target;
+    const sibling = link.closest(".nav").querySelectorAll(".nav-link");
+    const logo = link.closest(".nav").querySelector("img");
+
+    sibling.forEach((el) => {
+      if (el !== link) el.style.opacity = 0.8;
+    });
+    logo.style.opacity = 0.8;
+  }
+});
+nav.addEventListener("mouseout", function (e) {
+  if (e.target.classList.contains("nav-link")) {
+    const link = e.target;
+    const sibling = link.closest(".nav").querySelectorAll(".nav-link");
+    const logo = link.closest(".nav").querySelector("img");
+
+    sibling.forEach((el) => {
+      if (el !== link) el.style.opacity = 1;
+    });
+    logo.style.opacity = 1;
+  }
 });
 
-//////////////////TESTING A SMOOTH SCROLL ON HERON BTN1/////////////////////////
+//////////////////TESTING A SMOOTH SCROLL ON HERON BTN1/////////////////
 btn1.addEventListener("click", (e) => {
   e.preventDefault();
   featureBtn.scrollIntoView({ behavior: "smooth" });
 });
 
-//////////////////////////////Accordion/////////////////////////////////
+////////////////////////////////ACCORDION/////////////////////////////////
 
 // accordionFag.forEach((faq) => {
 //   faq.addEventListener("click", function (e) {
@@ -50,9 +83,9 @@ qna.forEach((view) => {
     if (view.parentElement.classList.contains("open")) {
       view.parentElement.classList.toggle("open");
     } else {
-      document
-        .querySelectorAll(".QNA")
-        .forEach((view) => view.parentElement.classList.remove("open"));
+      // document;
+      // .querySelectorAll(".QNA")
+      qna.forEach((view) => view.parentElement.classList.remove("open"));
       view.parentElement.classList.add("open");
     }
   });
