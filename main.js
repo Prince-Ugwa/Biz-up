@@ -107,3 +107,23 @@ btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 search.addEventListener("click", () => alert("COMING SOON 😍😍😍"));
 /////////////////////////////////////////////////////////////////////////
+
+const allSection = document.querySelectorAll("section");
+
+const sectionReveal = function (entries, obs) {
+  const [entry] = entries;
+
+  //GUARD CLAUSE
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section-hidden");
+  obs.unobserve(entry.target);
+};
+const sectionObs = new IntersectionObserver(sectionReveal, {
+  root: null,
+  threshold: 0.3,
+});
+
+allSection.forEach(function (section) {
+  sectionObs.observe(section);
+  section.classList.add("section-hidden");
+});
