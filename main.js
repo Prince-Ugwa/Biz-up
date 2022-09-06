@@ -27,10 +27,16 @@ const btnOpenModal = document.querySelectorAll(".btn-open-modal");
 const search = document.querySelector(".search");
 const section1 = document.querySelector("#section-1");
 
-////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////TAB/////////////////////////////////////////////////
+
+const tabs = document.querySelectorAll(".tab-btn");
+const tabBtnBox = document.querySelector(".tab-btn-box");
+const tabContents = document.querySelectorAll(".tab-content");
+
+/////////////////////////////////////////////////////////////////////////
 /////////////////SCROLL TO  TOP////////////////////////
 const scrollPageToTop = function () {
-  if (window.pageYOffset > 700) {
+  if (window.pageYOffset > 600) {
     scrollToTop.style.display = "block";
   } else scrollToTop.style.display = "none";
 };
@@ -258,3 +264,23 @@ const slideerComponent = function () {
   });
 };
 slideerComponent();
+
+///////////////////////////TAB COMPONENT/////////////////////
+
+tabBtnBox.addEventListener("click", function (e) {
+  const clickedBtn = e.target;
+  // console.log(clickedBtn);
+
+  tabs.forEach((tab) => tab.classList.remove("tab__btn--active"));
+  clickedBtn.classList.add("tab__btn--active");
+
+  tabContents.forEach((content) =>
+    content.classList.remove("tab-content--active")
+  );
+
+  ////activatate the contenet area
+  clickedBtn.classList.add("tab__btn--active");
+  document
+    .querySelector(`.tab-content-${clickedBtn.dataset.tab}`)
+    .classList.add("tab-content--active");
+});

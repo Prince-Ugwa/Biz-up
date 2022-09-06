@@ -132,7 +132,7 @@ nav {
   width: 100vw;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 /* ////////////////////////////////JAVASCRIPT WINDOW SCROLL///////////////////////////////////////////////// */
 .window-scroll {
@@ -298,7 +298,7 @@ nav .logo {
 }
 .features .feature-categories h4 {
   font-size: 20px;
-  margin: 15px;
+  margin: 15px 0;
   color: #bff6cf;
 }
 .features .feature-categories ion-icon {
@@ -543,9 +543,9 @@ nav .logo {
   z-index: 10;
 
   border: none;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.3);
   font-family: inherit;
-  color: #333;
+  color: rgb(187, 186, 186);
   border-radius: 50%;
   height: 55px;
   width: 55px;
@@ -615,18 +615,87 @@ nav .logo {
 .author-name {
   font-size: 18px;
   font-style: normal;
-  color: #2948e6;
+  color: #5ec576;
 }
 .job {
   font-style: normal;
-  color: #bb4e0a;
+  color: #ec9831;
   font-size: 12px;
 }
 .author img {
   border-radius: 50%;
   width: 80px;
 }
+.tab-component {
+  background-color: #fff;
+  padding: 40px 0;
+}
+.tab-component section {
+  margin: 0;
+}
+.tab-title h3 {
+  font-size: 24px;
+  color: #5ec576;
+  font-weight: 400;
+}
+.tab-title h4 {
+  font-size: 44px;
+  color: #ec9831;
+  font-weight: 400;
+}
+.tab-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+  background-image: linear-gradient(to right, #2948e6, #6d85fa);
+}
+.tab-left {
+  flex-basis: 50%;
+}
+.tab-right {
+  flex-basis: 50%;
+}
+.tab-btn-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 24px 0 32px 0;
+  gap: 20px;
+}
+.tab-btn-box .btn-o {
+  color: var(--button-color);
+  border: none;
+  outline: none;
+  padding: 18px 5px;
+  background-color: #5ec57627;
+  text-transform: capitalize;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.tab-btn-box .tab__btn--active {
+  background-color: #5ec576;
+  color: var(--text-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.tab-btn-box .tab__btn--active:hover {
+  background-color: #319949;
+}
+.tab-content {
+  color: var(--text-color);
+  display: none;
+}
+.tab-content h5 {
+  font-weight: 500;
+  text-transform: capitalize;
 
+  margin: 24px 0;
+}
+.tab-content--active {
+  display: block;
+  padding-right: 20px;
+}
 @media screen and (max-width: 1200px) {
   .container {
     max-width: var(--container-width-medium);
