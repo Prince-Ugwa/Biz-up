@@ -839,6 +839,16 @@ nav .logo {
   }
 }
 @media screen and (max-width: 768px) {
+  .modal__form {
+    padding: 50px 20px;
+  }
+  .modal__form .btn {
+    padding: 16px 24px;
+    /* width: 250px; */
+  }
+  .modal__form .names {
+    display: block;
+  }
   .accordion-container {
     grid-template-columns: 1fr;
   }
@@ -884,7 +894,7 @@ nav .logo {
     margin-top: 40px;
   }
   nav {
-    height: 100px;
+    /* height: 100px; */
     margin-bottom: 70px;
   }
 
@@ -896,7 +906,21 @@ nav .logo {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 650px) {
+  .modal {
+    max-width: 500px;
+    padding: 10px 20px;
+  }
+  .modal h2 {
+    margin: 0;
+    font-size: 28px;
+  }
+}
 @media screen and (max-width: 550px) {
+  .modal {
+    max-width: 400px;
+    padding: 10px;
+  }
   h1 {
     font-size: 36px;
   }
@@ -943,8 +967,28 @@ nav .logo {
   }
 }
 @media screen and (max-width: 440px) {
+  .modal {
+    max-width: 370px;
+  }
+  .modal form {
+    padding: 20px;
+  }
+  .hero-container {
+    gap: 0;
+  }
+  .hero-right {
+    width: 90%;
+  }
   .btn-mobile {
-    font-size: 16px;
+    bottom: 100px;
+    width: 100%;
+    transform: translateX(0);
+  }
+  .slide--content-head {
+    font-size: 18px;
+  }
+  .accd {
+    font-size: 24px;
   }
   h1 {
     font-size: 28px;
@@ -953,7 +997,39 @@ nav .logo {
     padding: 0 200px;
   }
 }
-@media screen and (max-width: 378px) {
+@media screen and (max-width: 414px) {
+  .btn-mobile {
+    bottom: 100px;
+    /* width: 100%; */
+  }
+  .text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 412px) {
+  .text {
+    font-size: 18px;
+  }
+  .hero-right {
+    margin-top: -80px;
+  }
+  .btn-mobile {
+    bottom: 100px;
+    /* width: 100%; */
+  }
+}
+@media screen and (max-width: 375px) {
+  .modal {
+    max-width: 320px;
+  }
+  .btn-mobile {
+    bottom: 50px;
+    /* width: 100%; */
+  }
+  .btn-close-modal {
+    right: 15px;
+  }
+
   .text {
     font-size: 14px;
     font-weight: 500;
@@ -980,4 +1056,7 @@ nav .logo {
   .open h5 {
     font-size: 20px;
   }
+}
+
+@media screen and (max-width: 330px) {
 }
